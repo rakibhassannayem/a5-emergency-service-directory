@@ -8,7 +8,6 @@ let coinCount = 100;
 // delegation
 
 getElement("services").addEventListener("click", function (e) {
-  // heart count
   if (e.target.id.includes("heart-btn")) {
     heartCount++;
     getElement("heart-count").innerText = heartCount;
@@ -23,10 +22,31 @@ getElement("services").addEventListener("click", function (e) {
       getElement("coin-count").innerText = coinCount;
 
       const name =
+        e.target.parentNode.parentNode.children[1].children[0].innerHTML;
+      const type =
         e.target.parentNode.parentNode.children[1].children[1].innerText;
       const number =
         e.target.parentNode.parentNode.children[1].children[2].innerText;
-      alert(`📞 Calling ${name} ${number}...`);
+      alert(`📞 Calling ${type} ${number}...`);
+      const time = new Date().toLocaleTimeString();
+
+      const historyContainer = getElement("history-container");
+      const history = document.createElement("div");
+      history.innerHTML = `
+      <div class="bg-gray-100 flex items-center justify-between p-3 rounded-lg">
+            <div>
+              <p>${name}</p>
+              <p class="text-gray-500">${number}</p>
+            </div>
+            <p>${time}</p>
+          </div>
+      `;
+
+      historyContainer.append(history);
     }
   }
 });
+
+getElement("btn-clear").addEventListener("click",function(){
+  getElement("history-container").innerHTML = ""
+})
