@@ -24,7 +24,7 @@ getElement("services").addEventListener("click", function (e) {
     // Copy to clipboard
     navigator.clipboard.writeText(number);
 
-    alert("Coppied!");
+    alert(`নম্বর কপি হয়েছেঃ ${number}`);
   } else if (e.target.id.includes("call-btn")) {
     if (coinCount < 20) {
       alert("❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে ২০ কয়েন লাগবে।");
