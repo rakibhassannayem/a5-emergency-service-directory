@@ -8,7 +8,7 @@ let coinCount = 100;
 // delegation
 
 getElement("services").addEventListener("click", function (e) {
-  
+
   const name = e.target.parentNode.parentNode.children[1].children[0].innerHTML;
   const type = e.target.parentNode.parentNode.children[1].children[1].innerText;
   const number =
@@ -41,7 +41,7 @@ getElement("services").addEventListener("click", function (e) {
       <div class="bg-gray-100 flex items-center justify-between p-3 rounded-lg">
             <div>
               <p>${name}</p>
-              <p class="text-gray-500">${number}</p>
+              <p class="text-gray-600">${number}</p>
             </div>
             <p>${time}</p>
           </div>
