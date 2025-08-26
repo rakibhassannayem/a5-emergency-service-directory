@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>জরুরি সেবা ডিরেক্টরি</title>
+  <!-- fontAwesome cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- tailwind cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <header class="flex justify-between items-center my-3 w-11/12 mx-auto">
+    <div class="flex gap-2 items-center">
+      <img class="w-14" src="./assets/logo.png" alt="">
+      <h1 class="text-2xl font-extrabold text-green-800 leading-6">Emergency<br>Service</h1>
+    </div>
+
+    <div class="flex gap-5">
+      <div class="flex items-center bg-green-100 rounded-full px-5 gap-2">
+        <span class="text-xl font-semibold">0</span>
+        <img class="w-8" src="./assets/heart.png" alt="">
+      </div>
+      <div class="flex items-center bg-green-100 rounded-full px-5 gap-2">
+        <span class="text-xl font-semibold">100</span>
+        <img class="w-8" src="./assets/coin.png" alt="">
+      </div>
+      <div class="bg-green-600 py-3 px-5 rounded-full">
+        <p class="text-white text-xl font-semibold"><span>0</span> Copy</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-green-100">
+    <!-- banner section -->
+    <section class="banner bg bg-gradient-to-r from-emerald-950 via-emerald-800 to-emerald-950 flex flex-col justify-center items-center gap-2 p-5">
+      <img class="w-20" src="./assets/logo-dark.png" alt="">
+      <h1 class="text-white text-3xl font-semibold">জরুরি সেবা ডিরেক্টরি</h1>
+      <p class="text-white text-lg font-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+    </section>
+
+    <!-- cards section-->
+    <section class="w-11/12 mx-auto grid grid-cols-12 gap-8 py-6">
+      <section id="services" class="col-span-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="card bg-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-2">
+            <div class="bg-red-200 p-2 rounded-lg">
+              <img class="w-9" src="./assets/emergency.png" alt="">
+            </div>
+            <i id="heart-btn" class="fa-regular fa-heart fa-2xl cursor-pointer"></i>
+          </div>
+          <div class="mb-5">
+            <h1 class="text-lg font-bold">জাতীয় জরুরি সেবা</h1>
+            <p class="text-gray-500 mb-5">National Emergency</p>
+
+            <h1 class="text-2xl font-bold mb-2">999</h1>
+            <span class="bg-gray-200 p-2 rounded-full">সার্বজনীন</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="copy-btn" class="p-2 font-semibold border border-gray-300 rounded-lg w-full cursor-pointer"><i class="fa-regular fa-copy"></i> Copy</button>
+            <button id="call-btn0" class="p-2 font-semibold text-white bg-green-600 rounded-lg w-full cursor-pointer"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </div>
+
+        <div class="card bg-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-2">
+            <div class="bg-red-200 p-2 rounded-lg">
+              <img class="w-9" src="./assets/emergency.png" alt="">
+            </div>
+            <i id="heart-btn" class="fa-regular fa-heart fa-2xl cursor-pointer"></i>
+          </div>
+          <div class="mb-5">
+            <h1 class="text-lg font-bold">জাতীয় জরুরি সেবা</h1>
+            <p class="text-gray-500 mb-5">National Emergency</p>
+
+            <h1 class="text-2xl font-bold mb-2">999</h1>
+            <span class="bg-gray-200 p-2 rounded-full">সার্বজনীন</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="copy-btn" class="p-2 font-semibold border border-gray-300 rounded-lg w-full cursor-pointer"><i class="fa-regular fa-copy"></i> Copy</button>
+            <button id="call-btn0" class="p-2 font-semibold text-white bg-green-600 rounded-lg w-full cursor-pointer"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </div>
+
+        <div class="card bg-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-2">
+            <div class="bg-red-200 p-2 rounded-lg">
+              <img class="w-9" src="./assets/emergency.png" alt="">
+            </div>
+            <i id="heart-btn" class="fa-regular fa-heart fa-2xl cursor-pointer"></i>
+          </div>
+          <div class="mb-5">
+            <h1 class="text-lg font-bold">জাতীয় জরুরি সেবা</h1>
+            <p class="text-gray-500 mb-5">National Emergency</p>
+
+            <h1 class="text-2xl font-bold mb-2">999</h1>
+            <span class="bg-gray-200 p-2 rounded-full">সার্বজনীন</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="copy-btn" class="p-2 font-semibold border border-gray-300 rounded-lg w-full cursor-pointer"><i class="fa-regular fa-copy"></i> Copy</button>
+            <button id="call-btn0" class="p-2 font-semibold text-white bg-green-600 rounded-lg w-full cursor-pointer"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </div>
+
+        <div class="card bg-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-2">
+            <div class="bg-red-200 p-2 rounded-lg">
+              <img class="w-9" src="./assets/emergency.png" alt="">
+            </div>
+            <i id="heart-btn" class="fa-regular fa-heart fa-2xl cursor-pointer"></i>
+          </div>
+          <div class="mb-5">
+            <h1 class="text-lg font-bold">জাতীয় জরুরি সেবা</h1>
+            <p class="text-gray-500 mb-5">National Emergency</p>
+
+            <h1 class="text-2xl font-bold mb-2">999</h1>
+            <span class="bg-gray-200 p-2 rounded-full">সার্বজনীন</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="copy-btn" class="p-2 font-semibold border border-gray-300 rounded-lg w-full cursor-pointer"><i class="fa-regular fa-copy"></i> Copy</button>
+            <button id="call-btn0" class="p-2 font-semibold text-white bg-green-600 rounded-lg w-full cursor-pointer"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </div>
+        
+        <div class="card bg-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-2">
+            <div class="bg-red-200 p-2 rounded-lg">
+              <img class="w-9" src="./assets/emergency.png" alt="">
+            </div>
+            <i id="heart-btn" class="fa-regular fa-heart fa-2xl cursor-pointer"></i>
+          </div>
+          <div class="mb-5">
+            <h1 class="text-lg font-bold">জাতীয় জরুরি সেবা</h1>
+            <p class="text-gray-500 mb-5">National Emergency</p>
+
+            <h1 class="text-2xl font-bold mb-2">999</h1>
+            <span class="bg-gray-200 p-2 rounded-full">সার্বজনীন</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="copy-btn" class="p-2 font-semibold border border-gray-300 rounded-lg w-full cursor-pointer"><i class="fa-regular fa-copy"></i> Copy</button>
+            <button id="call-btn0" class="p-2 font-semibold text-white bg-green-600 rounded-lg w-full cursor-pointer"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </div>
+        <div class="card bg-white p-8 rounded-lg">
+          <div class="flex justify-between items-center mb-2">
+            <div class="bg-red-200 p-2 rounded-lg">
+              <img class="w-9" src="./assets/emergency.png" alt="">
+            </div>
+            <i id="heart-btn" class="fa-regular fa-heart fa-2xl cursor-pointer"></i>
+          </div>
+          <div class="mb-5">
+            <h1 class="text-lg font-bold">জাতীয় জরুরি সেবা</h1>
+            <p class="text-gray-500 mb-5">National Emergency</p>
+
+            <h1 class="text-2xl font-bold mb-2">999</h1>
+            <span class="bg-gray-200 p-2 rounded-full">সার্বজনীন</span>
+          </div>
+          <div class="flex gap-2">
+            <button id="copy-btn" class="p-2 font-semibold border border-gray-300 rounded-lg w-full cursor-pointer"><i class="fa-regular fa-copy"></i> Copy</button>
+            <button id="call-btn0" class="p-2 font-semibold text-white bg-green-600 rounded-lg w-full cursor-pointer"><i class="fa-solid fa-phone"></i> Call</button>
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- History section -->
+      <aside class="bg-white col-span-2">History</aside>
+    </section>
+  </main>
+</body>
+</html>
