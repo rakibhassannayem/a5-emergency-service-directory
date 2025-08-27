@@ -5,34 +5,48 @@ let heartCount = 0;
 let copyCount = 0;
 let coinCount = 100;
 
-// delegation
 
-getElement("services").addEventListener("click", function (e) {
+// copy button functionality
+const copyBtns = document.querySelectorAll("#copy-btn");
+for (const btn of copyBtns) {
+  btn.addEventListener("click", function (e) {
+    const number =
+      e.target.closest("#copy-btn").parentNode.parentNode.children[1]
+        .children[2].innerText;
 
-  const name = e.target.parentNode.parentNode.children[1].children[0].innerHTML;
-  const type = e.target.parentNode.parentNode.children[1].children[1].innerText;
-  const number =
-    e.target.parentNode.parentNode.children[1].children[2].innerText;
-
-  if (e.target.id.includes("heart-btn")) {
-    heartCount++;
-    getElement("heart-count").innerText = heartCount;
-  } else if (e.target.id.includes("copy-btn")) {
     copyCount++;
     getElement("copy-count").innerText = copyCount;
 
-    // Copy to clipboard
     navigator.clipboard.writeText(number);
 
     alert(`নম্বর কপি হয়েছেঃ ${number}`);
-  } else if (e.target.id.includes("call-btn")) {
+  });
+}
+
+// call button functionality
+const callBtns = document.querySelectorAll("#call-btn");
+for (const btn of callBtns) {
+  btn.addEventListener("click", function (e) {
+
+    const number =
+      e.target.closest("#call-btn").parentNode.parentNode.children[1]
+        .children[2].innerText;
+        
+    const name =
+      e.target.closest("#call-btn").parentNode.parentNode.children[1]
+        .children[0].innerText;
+        
+    const nameEnglish = e.target.closest("#call-btn").parentNode.parentNode.children[1]
+        .children[1].innerText
+        
+
     if (coinCount < 20) {
       alert("❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে ২০ কয়েন লাগবে।");
     } else {
       coinCount -= 20;
       getElement("coin-count").innerText = coinCount;
 
-      alert(`📞 Calling ${type} ${number}...`);
+      alert(`📞 Calling ${nameEnglish} ${number}...`);
       const time = new Date().toLocaleTimeString();
 
       const historyContainer = getElement("history-container");
@@ -49,9 +63,11 @@ getElement("services").addEventListener("click", function (e) {
 
       historyContainer.append(history);
     }
-  }
-});
+  });
+}
 
+
+// clear button functionality
 getElement("btn-clear").addEventListener("click", function () {
   getElement("history-container").innerHTML = "";
 });
